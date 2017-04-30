@@ -5,5 +5,5 @@ window.jQuery = $;
 window.$ = $;
 
 $(() => {
-    galleryLazyLoad("images/image_placeholder.png");
+    galleryLazyLoad();
 });
