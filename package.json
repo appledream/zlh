@@ -4,7 +4,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dp0ch/Zoe-Leandra-Homepage"
+    "url": "https://github.com/dp0ch/zlh"
   },
   "devDependencies": {
     "babel-core": "^6.9.0",
