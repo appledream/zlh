@@ -1,0 +1,46 @@
+#menu div{
+    min-height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#logo{
+    background-image: url("../images/logo.png");
+}
+
+#menu-1{
+    background-image: url("../images/T1.png");
+}
+
+#menu-1.current{
+    background-image: url("../images/T1colo.png");
+}
+
+#menu-1:hover{
+    background-image: url("../images/T1colo.png");
+}
+
+.gallery {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-item {
+    min-height: 50px;
+    width: 250px;
+    padding: 5px;
+}
+
+.gallery-item img {
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
