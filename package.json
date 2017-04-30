@@ -2,9 +2,9 @@
   "name": "zlh",
   "version": "0.0.1",
   "license": "ISC",
-  "repository" : { 
-    "type" : "git",
-    "url" : "https://github.com/dp0ch/Zoe-Leandra-Homepage"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dp0ch/Zoe-Leandra-Homepage"
   },
   "devDependencies": {
     "babel-core": "^6.9.0",
@@ -31,7 +31,6 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "hashchange": "^1.0.0",
     "jquery": "^3.2.1"
   }
 }
