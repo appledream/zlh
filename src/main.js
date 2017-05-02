@@ -1,9 +1,9 @@
 const $ = require("jquery");
-const galleryLazyLoad = require("./gallery_lazy_load.js");
+const gallery = require("./gallery.js");
 
 window.jQuery = $;
 window.$ = $;
 
 $(() => {
-    galleryLazyLoad();
+    gallery();
 });

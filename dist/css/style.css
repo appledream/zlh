@@ -27,9 +27,9 @@
 }
 
 .gallery-item {
-    min-height: 50px;
-    width: 250px;
-    padding: 5px;
+    width: 100%;
+    margin: 5px;
+    text-align: center;
 }
 
 .gallery-item img {
