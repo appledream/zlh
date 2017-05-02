@@ -25,7 +25,6 @@ function reflowGalleries() {
             const $img = $item.find("img");
             const imageWidth = $img[0].naturalWidth;
             const targetWidth = 100 * (width >= imageWidth ? imageWidth / width : 1);
-            console.log(imageWidth);
             $item.css("width", targetWidth + "%");
         });
         $gallery.masonry();
