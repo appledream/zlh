@@ -33,7 +33,7 @@ function compile(watch) {
         this.emit('end');
       })
       .pipe(sourcemaps.write("./"))
-      .pipe(gulp.dest("./dist"));
+      .pipe(gulp.dest("./docs"));
   }
 
   if (watch) {
