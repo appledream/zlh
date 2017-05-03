@@ -9,7 +9,7 @@ module.exports = function init() {
         $galleryImage.on("load", reflowGalleries);
     });
     
-    $(window).on("load", reflowGalleries);
+    $(window).on("load", () => setTimeout(reflowGalleries, 100));
 
     $(window).on("resize", () => setTimeout(reflowGalleries, 100));
 };
