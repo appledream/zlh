@@ -61,3 +61,13 @@ a:hover{
     width: 100%;
     height: auto;
 }
+
+.home-banner {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.home-banner:hover {
+    -webkit-filter: none;
+    filter: none;
+}
