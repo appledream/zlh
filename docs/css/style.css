@@ -1,28 +1,42 @@
+html, body{
+    background-color: #282828;
+    color: white;
+    font-family: "Catamaran", sans-serif;
+}
+
+a{
+    color:black;
+}
+
+a:hover{
+    color:white;
+}
+
 #menu{
     margin-bottom: 50px;
 }
 
 #menu div{
+    color: black;
+    text-align:center;
+    font-size: 1.5em;
+    line-height: 100px;
     min-height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
+#menu div.current {
+    color: white;
+}
+
+#menu div:hover {
+    color: white;
+}
+
 #logo{
     background-image: url("../images/logo.png");
-}
-
-#menu-1{
-    background-image: url("../images/T1.png");
-}
-
-#menu-1.current{
-    background-image: url("../images/T1colo.png");
-}
-
-#menu-1:hover{
-    background-image: url("../images/T1colo.png");
 }
 
 .gallery {
