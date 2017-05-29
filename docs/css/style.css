@@ -1,24 +1,26 @@
-html, body{
+html,
+body {
+    height: 100%;
     background-color: #282828;
     color: white;
     font-family: "Catamaran", sans-serif;
 }
 
-a{
-    color:black;
-}
-
-a:hover{
-    color:white;
-}
-
-#menu{
-    margin-bottom: 50px;
-}
-
-#menu div{
+a {
     color: black;
-    text-align:center;
+}
+
+a:hover {
+    color: white;
+}
+
+#menu {
+    margin-bottom: 25px;
+}
+
+#menu div {
+    color: black;
+    text-align: center;
     font-size: 1.5em;
     line-height: 100px;
     min-height: 100px;
@@ -35,25 +37,8 @@ a:hover{
     color: white;
 }
 
-#logo{
+#logo {
     background-image: url("../images/logo.png");
-}
-
-.gallery {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.gallery-item {
-    width: 100%;
-    margin: 5px;
-    text-align: center;
-}
-
-.gallery-item img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 .content-image {
@@ -62,12 +47,62 @@ a:hover{
     height: auto;
 }
 
-.home-banner {
+.color-hover {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
 
-.home-banner:hover {
+.color-hover:hover {
     -webkit-filter: none;
     filter: none;
 }
+
+.overlay-link {
+    cursor: pointer;
+}
+
+.overlay-container {
+    line-height: 100%;
+    display: none;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.overlay-container>img{
+    vertical-align: middle;
+    padding:0;
+    margin:0;
+    display: inline;
+    width: auto;
+    height: 100%;
+}
+
+.overlay-container>div{
+    overflow-y: auto;
+    max-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    display:inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 500px;
+    white-space: normal;
+}
+
+.overlay-close-button {
+    background-image: url("../images/close.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+

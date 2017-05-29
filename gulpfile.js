@@ -1,11 +1,11 @@
-const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-const browserify = require('browserify');
-const watchify = require('watchify');
-const babel = require('babelify');
-const uglify = require('gulp-uglify');
+const gulp = require("gulp");
+const sourcemaps = require("gulp-sourcemaps");
+const source = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+const browserify = require("browserify");
+const watchify = require("watchify");
+const babel = require("babelify");
+const uglify = require("gulp-uglify");
 
 function compile(watch) {
   const bundler = watchify(

@@ -1,9 +1,9 @@
 const $ = require("jquery");
-const gallery = require("./gallery.js");
+const overlay = require("./overlay.js");
 
 window.jQuery = $;
 window.$ = $;
 
 $(() => {
-    gallery();
+    overlay();
 });
