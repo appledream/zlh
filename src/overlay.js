@@ -2,11 +2,18 @@
 const $ = require("jquery");
 
 module.exports = function init() {
+    let isTransitioning = false;
     $(".overlay-link").each((i, overlayLink) => {
+        const $overlay = $("#" + $overlayLink.data("overlay"));
         const $overlayLink = $(overlayLink);
         $overlayLink.on("click", () => {
-            $("#" + $overlayLink.data("overlay")).fadeIn(1000);
-            $("#main-content").css("display", "none");
+            if(isTransitioning) return;
+            isTransitioning = true;
+            $("#main-content").fadeOut(500, () => {
+               $overlay.fadeIn(750, () => {
+                   isTransitioning = false;
+               }); 
+            });
         });
     });
 
