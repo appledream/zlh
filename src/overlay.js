@@ -4,8 +4,8 @@ const $ = require("jquery");
 module.exports = function init() {
     let isTransitioning = false;
     $(".overlay-link").each((i, overlayLink) => {
-        const $overlay = $("#" + $overlayLink.data("overlay"));
         const $overlayLink = $(overlayLink);
+        const $overlay = $("#" + $overlayLink.data("overlay"));
         $overlayLink.on("click", () => {
             if(isTransitioning) return;
             isTransitioning = true;
