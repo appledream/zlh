@@ -61,11 +61,19 @@ a:hover {
 }
 
 .color-hover {
+    -o-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    -o-transition: -o-filter, filter, 1s;
+    -moz-transition: -moz-filter, filter, 1s;
+    -webkit-transition: -webkit-filter, filter, 1s;
+    transition: filter, -o-filter, -moz-filter, -webkit-filter, 1s;
 }
 
 .color-hover:hover {
+    -o-filter: none;
+    -moz-filter: none;
     -webkit-filter: none;
     filter: none;
 }
@@ -87,8 +95,6 @@ a:hover {
 
 .overlay-container>img {
     vertical-align: middle;
-    padding: 0;
-    margin: 0;
     display: inline;
     width: auto;
     height: 100%;
