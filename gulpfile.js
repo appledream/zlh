@@ -32,7 +32,7 @@ function compile(watch) {
         console.error("Uglify Error:\n" + err);
         this.emit('end');
       })
-      .pipe(sourcemaps.write("./"))
+      //.pipe(sourcemaps.write("./"))
       .pipe(gulp.dest("./docs"));
   }
 

@@ -1,7 +1,7 @@
 "use strict";
 const $ = require("jquery");
 const autoScrollWidth = 150;
-const maxScrollV = 1;
+const maxScrollV = 1000;
 
 module.exports = function init() {
     let isTransitioning = false;
@@ -23,10 +23,12 @@ module.exports = function init() {
             });
         });
 
+        let lastTime = 0;
         (function scrollLoop(t) {
+            const deltaT = (t - lastTime) / 1000;
+            lastTime = t;
             if (scrollV != 0) {
-                t /= 1000;
-                $overlay.scrollLeft($overlay.scrollLeft() + scrollV * t);
+                $overlay.scrollLeft($overlay.scrollLeft() + scrollV * deltaT);
             }
             requestAnimationFrame(scrollLoop);
         })(0);
