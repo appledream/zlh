@@ -1,7 +1,7 @@
 "use strict";
 const $ = require("jquery");
-const autoScrollWidth = 150;
-const maxScrollV = 1000;
+const autoScrollWidth = 200;
+const maxScrollV = 800;
 
 module.exports = function init() {
     let isTransitioning = false;
