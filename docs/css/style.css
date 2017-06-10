@@ -1,9 +1,22 @@
 html,
 body {
     height: 100%;
+    background-color: white;
+    color: #282828;
+    font-family: "Catamaran", sans-serif;
+}
+
+.dark {
     background-color: #333333;
     color: white;
-    font-family: "Catamaran", sans-serif;
+}
+
+.dark a {
+    color: #f4b450;
+}
+
+.dark a:hover {
+    color: white;
 }
 
 *::-webkit-scrollbar {
@@ -20,11 +33,11 @@ body {
 }
 
 a {
-    color: black;
+    color: #f4b450;
 }
 
 a:hover {
-    color: white;
+    color: #282828;
 }
 
 #menu {
@@ -32,7 +45,6 @@ a:hover {
 }
 
 #menu div {
-    color: black;
     text-align: center;
     font-size: 1.5em;
     line-height: 100px;
@@ -123,3 +135,9 @@ a:hover {
     top: 10px;
     right: 10px;
 }
+
+.top-padded{
+    padding-top: 20px;
+}
+
+
