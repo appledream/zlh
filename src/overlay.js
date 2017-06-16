@@ -2,6 +2,7 @@
 const $ = require("jquery");
 const autoScrollWidth = 200;
 const maxScrollV = 800;
+const isMobile = require("./is_mobile.js");
 
 module.exports = function init() {
     let isTransitioning = false;
@@ -23,32 +24,43 @@ module.exports = function init() {
             });
         });
 
-        let lastTime = 0;
-        (function scrollLoop(t) {
-            const deltaT = (t - lastTime) / 1000;
-            lastTime = t;
-            if (scrollV != 0) {
-                $overlay.scrollLeft($overlay.scrollLeft() + scrollV * deltaT);
-            }
-            requestAnimationFrame(scrollLoop);
-        })(0);
+        if (!isMobile) {
+            $(window).bind("mousewheel DOMMouseScroll", function(event) {
+                if(!$overlay.is(":visible")) return;
+                let delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
+                if(!delta) delta = 0;
+                $overlay.scrollLeft($overlay.scrollLeft() + delta);
+            });
 
-        $overlay.on("mousemove", (e) => {
-            const clientWidth = $overlay.innerWidth();
-            if (e.clientX <= autoScrollWidth || e.clientX >= clientWidth - autoScrollWidth) {
-                if(e.clientX > clientWidth / 2){
-                    scrollV = (1 - (clientWidth - e.clientX) / autoScrollWidth) * maxScrollV;
-                }else{
-                    scrollV = (1 - e.clientX / autoScrollWidth) * -maxScrollV;
+            let lastTime = 0;
+            (function scrollLoop(t) {
+                const deltaT = (t - lastTime) / 1000;
+                lastTime = t;
+                if (scrollV != 0) {
+                    $overlay.scrollLeft($overlay.scrollLeft() + scrollV * deltaT);
                 }
-            }else{
-                scrollV = 0;
-            }
-        });
+                requestAnimationFrame(scrollLoop);
+            })(0);
 
-        $overlay.on("mouseleave", () => {
-            scrollV = 0;
-        });
+            $overlay.on("mousemove", (e) => {
+                const clientWidth = $overlay.innerWidth();
+                if (e.clientX <= autoScrollWidth || e.clientX >= clientWidth - autoScrollWidth) {
+                    if (e.clientX > clientWidth / 2) {
+                        scrollV = (1 - (clientWidth - e.clientX) / autoScrollWidth) * maxScrollV;
+                    }
+                    else {
+                        scrollV = (1 - e.clientX / autoScrollWidth) * -maxScrollV;
+                    }
+                }
+                else {
+                    scrollV = 0;
+                }
+            });
+
+            $overlay.on("mouseleave", () => {
+                scrollV = 0;
+            });
+        }
     });
 
     $(".overlay-close-button").on("click", function() {
