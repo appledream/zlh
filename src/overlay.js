@@ -29,7 +29,7 @@ module.exports = function init() {
                 if(!$overlay.is(":visible")) return;
                 let delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
                 if(!delta) delta = 0;
-                $overlay.scrollLeft($overlay.scrollLeft() + delta);
+                $overlay.scrollLeft($overlay.scrollLeft() - delta);
             });
 
             let lastTime = 0;
