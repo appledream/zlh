@@ -105,6 +105,10 @@ a:hover {
     white-space: nowrap;
 }
 
+.overlay-container#main-bar {
+    display: block;
+}
+
 .overlay-container>img {
     vertical-align: middle;
     display: inline;
