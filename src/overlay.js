@@ -68,7 +68,7 @@ module.exports = function init() {
         const $this = $(this);
         $this.hide();
         $this.parent().fadeOut(500, () => {
-            $(".overlay-container").hide();
+            $(".overlay-container").not("#main-bar").hide();
             $this.show();
             $("#main-content").fadeIn(500);
         });
