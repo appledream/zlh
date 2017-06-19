@@ -103,11 +103,11 @@ a:hover {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    text-align: center;
 }
 
 .overlay-container#main-bar {
     display: block;
+    text-align: center;
 }
 
 .overlay-container>img {
@@ -121,7 +121,6 @@ a:hover {
     overflow-y: auto;
     max-height: 100%;
     vertical-align: middle;
-    text-align: center;
     display: inline-block;
     padding-left: 20px;
     padding-right: 20px;

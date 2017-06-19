@@ -9,6 +9,7 @@ module.exports = function init() {
     $(".overlay-link[data-overlay]").each((i, overlayLink) => {
         const $overlayLink = $(overlayLink);
         const $overlay = $("#" + $overlayLink.data("overlay"));
+        console.log($overlay);
 
         let scrollV = 0;
 
